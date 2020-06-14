@@ -7,6 +7,7 @@
       feel that we could work together, do not hesitate to contact me through
       the "Contact" section above.
     </p>
+    <h2>What I can do for you</h2>
     <div class="application">
       <img
         src="../assets/web_app.png"
@@ -90,7 +91,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   max-width: 70%;
-  margin-top: 6%;
+  margin-top: 5%;
   /* background-color: red; */
 }
 

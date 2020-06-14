@@ -6,6 +6,7 @@
 
 <style scoped>
   form {
-    height: 85vh;
+    margin-top: 5%;
+    height: 80vh;
   }
 </style>
