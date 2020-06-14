@@ -21,7 +21,12 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  height: 5vh;
+  height: 7vh;
+  position: fixed;
+  background-color: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 h1 {

@@ -18,6 +18,11 @@
         <button value="french" @click="downloadResume($event)">
           Download (French)
         </button>
+        <!-- <a
+          :href="require('../assets/resume/coin_alexandre_resume_french.pdf')"
+          download
+          >Download (French)</a
+        > -->
         <button value="english" @click="downloadResume">
           Download (English)
         </button>
