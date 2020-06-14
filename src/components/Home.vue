@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="container">
     <h1>{{ title }}</h1>
     <p class="intro">
       Have you been dreaming of a website or an application ? I know you have !
@@ -45,10 +45,11 @@
         class="mobile_app_img"
       />
       <div class="mobile_app_description">
-        <h3>Web applications</h3>
+        <h3>Mobile applications</h3>
         <p>
-          Since I've started coding, my main focus has primarily been web
-          applications. I can help you design from sratch your project.
+          Thanks to technologies such as React Native, you no longer need to
+          develop different codebases depending on your targeted device. One
+          code base, all available platforms, it's as simple as that !
         </p>
       </div>
     </div>
@@ -68,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.main {
+.container {
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -97,7 +98,7 @@ export default {
 .mobile_app_img {
   max-width: 30%;
   border-radius: 1em;
-  box-shadow:  5px 5px #ffffff;
+  box-shadow: 5px 5px #ffffff;
 }
 
 .application_description,
@@ -123,5 +124,35 @@ a {
 
 h1 {
   display: block;
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .application,
+  .website,
+  .mobile_app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .application_img,
+  .website_img,
+  .mobile_app_img {
+    max-width: 80%;
+    border-radius: 0.5em;
+  }
+
+  .application_description,
+  .website_description,
+  .mobile_app_description {
+    max-width: 80%;
+  }
+
+  .website {
+    flex-direction: column-reverse;
+  }
 }
 </style>

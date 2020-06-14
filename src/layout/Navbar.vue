@@ -2,7 +2,7 @@
   <div class="container">
     <ul id="links">
       <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" to="/">Work</router-link>
+      <router-link class="link" to="/work">Work</router-link>
       <router-link class="link" to="/about">About</router-link>
       <!-- <router-link class="link" to="/">Articles</router-link> -->
       <router-link class="link" to="/contact">Contact</router-link>
@@ -47,5 +47,9 @@ h1 {
 .link,
 .link:visited {
   color: #2c3e50;
+}
+
+.router-link-exact-active {
+  font-weight: bold;
 }
 </style>
