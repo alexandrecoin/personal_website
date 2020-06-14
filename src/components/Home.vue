@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <h1>{{ title }}</h1>
-    <p>Welcome to my personal website !</p>
   </div>
 </template>
 
@@ -10,7 +9,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      title: 'Another JS developer',
+      title: 'Get the product you dream of.',
     };
   },
 };
@@ -19,8 +18,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main {
-  height: 90vh;
+  height: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
