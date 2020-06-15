@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar :style="{ background: scrollPosition < 50 ? '#f1f1f1' : 'white' }" />
     <router-view></router-view>
     <Footer />
   </div>
@@ -15,6 +15,19 @@ export default {
   components: {
     Navbar,
     Footer,
+  },
+  data() {
+    return {
+      scrollPosition: null,
+    };
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
   },
 };
 </script>

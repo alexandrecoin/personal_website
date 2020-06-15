@@ -90,9 +90,9 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 70%;
+  max-width: 80%;
   margin-top: 5%;
-  /* background-color: red; */
+  padding: 3% 0%;
 }
 
 .application_img,
@@ -138,7 +138,7 @@ h1 {
   .application_img:hover,
   .website_img:hover,
   .mobile_app_img:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 }
 
