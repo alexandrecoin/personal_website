@@ -27,6 +27,19 @@
           Download (English)
         </button>
       </div>
+      <h3 class="techs_title">Techs I am using on a daily basis :</h3>
+      <div class="techs">
+        <ul
+          v-for="(techno, index) in technos"
+          :key="index"
+          class="technos_list"
+        >
+          <li class="techno">
+            <!-- <h3>{{ techno.name }}</h3> -->
+            <img :src="techno.path" v-bind:alt="techno.name" class="logo" />
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -37,10 +50,38 @@ export default {
   data() {
     return {
       about,
+      technos: [
+        {
+          name: 'JavaScript',
+          path: require('../assets/technos/js_logo.png'),
+        },
+        {
+          name: 'Vue.js',
+          path: require('../assets/technos/vue_logo.png'),
+        },
+        // {
+        //   name: 'React',
+        //   path: require('../assets/technos/react_logo.png'),
+        // },
+        {
+          name: 'Node',
+          path: require('../assets/technos/node_logo.png'),
+        },
+        {
+          name: 'NestJS',
+          path: require('../assets/technos/nestjs_logo.png'),
+        },
+      ],
     };
   },
   methods: {
-    downloadResume() {},
+    downloadResume(e) {
+      console.log(e.target.value);
+    },
+    // getPicture(path) {
+    //   console.log('../assets/technos/' + path + '.png');
+    //   return '../assets/technos/' + path + '.png';
+    // },
   },
 };
 </script>
@@ -50,6 +91,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 7%;
+  height: 80vh;
+  max-width: 100vw;
+  /* background: red; */
 }
 
 .text-container {
@@ -71,6 +116,26 @@ export default {
   display: none;
 }
 
+.techs_title {
+  margin-top: 10%;
+}
+
+.techs {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5vw;
+}
+
+.technos_list {
+  margin-right: 1vw;
+  max-width: 10vw;
+  list-style-type: none;
+}
+
+.logo {
+  max-height: 80px;
+}
+
 @media (max-width: 640px) {
   .container {
     flex-direction: column;
@@ -90,11 +155,18 @@ export default {
     display: block;
     border-radius: 50%;
     max-width: 30vw;
-    margin-top: 10%;
+    margin-top: 20%;
   }
 
   .text-container {
     max-width: 90%;
+  }
+
+  .techs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+    margin-left: 20%;
   }
 }
 </style>
