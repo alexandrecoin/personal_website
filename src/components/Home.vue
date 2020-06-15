@@ -100,25 +100,13 @@ export default {
 .mobile_app_img {
   max-width: 30%;
   border-radius: 1em;
-  box-shadow: 5px 5px #ffffff;
+  box-shadow: 20px 20px 42px #d9d9d9, -20px -20px 42px #ffffff;
 }
 
 .application_description,
 .website_description,
 .mobile_app_description {
   max-width: 50%;
-}
-
-.application_img,
-.website_img,
-.mobile_app_img {
-  transition: transform 1s ease-in-out;
-}
-
-.application_img:hover,
-.website_img:hover,
-.mobile_app_img:hover {
-  transform: scale(1.1);
 }
 
 h3 {
@@ -138,6 +126,20 @@ a {
 
 h1 {
   display: block;
+}
+
+@media (min-width: 640px) {
+  .application_img,
+  .website_img,
+  .mobile_app_img {
+    transition: transform 1s ease-in-out;
+  }
+
+  .application_img:hover,
+  .website_img:hover,
+  .mobile_app_img:hover {
+    transform: scale(1.15);
+  }
 }
 
 @media (max-width: 640px) {

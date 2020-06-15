@@ -27,7 +27,7 @@
           Download (English)
         </button>
       </div>
-      <h3 class="techs_title">Techs I am using on a daily basis :</h3>
+      <h3 class="techs_title">I am using on a daily basis :</h3>
       <div class="techs">
         <ul
           v-for="(techno, index) in technos"
