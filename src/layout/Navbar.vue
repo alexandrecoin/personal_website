@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style scoped>
+.change_color {
+  background-color: red;
+}
 .container {
   z-index: 1;
   display: flex;

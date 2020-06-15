@@ -138,7 +138,7 @@ h1 {
   .application_img:hover,
   .website_img:hover,
   .mobile_app_img:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 }
 
