@@ -27,18 +27,18 @@
           Download (English)
         </button>
       </div>
+      <h3 class="techs_title">Techs I am using on a daily basis :</h3>
       <div class="techs">
-        <h3>Techs I am using:</h3>
-        <!-- <ul v-for="(techno, index) in technos" :key="index" class="technos_list">
-          <li>
-            <div >
-              <h3>{{ techno.name }}</h3>
-              <img :src="getPicture(techno.path)" v-bind:alt="techno.name" /> 
-              <h3>JavaScript</h3>
-              <img src="../assets/technos/js_logo.png" alt="js_logo" class="logo" />
-            </div>
+        <ul
+          v-for="(techno, index) in technos"
+          :key="index"
+          class="technos_list"
+        >
+          <li class="techno">
+            <!-- <h3>{{ techno.name }}</h3> -->
+            <img :src="techno.path" v-bind:alt="techno.name" class="logo" />
           </li>
-        </ul> -->
+        </ul>
       </div>
     </div>
   </div>
@@ -53,30 +53,30 @@ export default {
       technos: [
         {
           name: 'JavaScript',
-          path: 'js_logo',
+          path: require('../assets/technos/js_logo.png'),
         },
         {
           name: 'Vue.js',
-          path: 'vue_logo',
+          path: require('../assets/technos/vue_logo.png'),
         },
-        {
-          name: 'React',
-          path: 'react_logo',
-        },
+        // {
+        //   name: 'React',
+        //   path: require('../assets/technos/react_logo.png'),
+        // },
         {
           name: 'Node',
-          path: 'node_logo',
+          path: require('../assets/technos/node_logo.png'),
         },
         {
           name: 'NestJS',
-          path: 'nestjs_logo',
+          path: require('../assets/technos/nestjs_logo.png'),
         },
       ],
     };
   },
   methods: {
     downloadResume(e) {
-      console.log(e.target.value)
+      console.log(e.target.value);
     },
     // getPicture(path) {
     //   console.log('../assets/technos/' + path + '.png');
@@ -92,6 +92,9 @@ export default {
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 7%;
+  height: 80vh;
+  max-width: 100vw;
+  /* background: red; */
 }
 
 .text-container {
@@ -113,13 +116,24 @@ export default {
   display: none;
 }
 
-.technos_list {
+.techs_title {
+  margin-top: 10%;
+}
+
+.techs {
   display: flex;
   flex-direction: row;
+  margin-right: 5vw;
+}
+
+.technos_list {
+  margin-right: 1vw;
+  max-width: 10vw;
+  list-style-type: none;
 }
 
 .logo {
-  max-height: 10%;
+  max-height: 80px;
 }
 
 @media (max-width: 640px) {
@@ -146,6 +160,13 @@ export default {
 
   .text-container {
     max-width: 90%;
+  }
+
+  .techs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+    margin-left: 20%;
   }
 }
 </style>

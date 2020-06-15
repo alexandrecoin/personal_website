@@ -109,6 +109,18 @@ export default {
   max-width: 50%;
 }
 
+.application_img,
+.website_img,
+.mobile_app_img {
+  transition: transform 1s ease-in-out;
+}
+
+.application_img:hover,
+.website_img:hover,
+.mobile_app_img:hover {
+  transform: scale(1.1);
+}
+
 h3 {
   margin: 40px 0 0;
 }
