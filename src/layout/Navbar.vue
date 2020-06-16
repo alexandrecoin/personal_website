@@ -2,7 +2,6 @@
   <div class="container">
     <ul id="links">
       <router-link class="link" to="/">Home</router-link>
-      <!-- <router-link class="link" to="/work">Work</router-link> -->
       <router-link class="link" to="/about">About</router-link>
       <li class="twitter">
         <a href="https://www.twitter.com/lxndrcn" target="_blank" class="link"
@@ -14,16 +13,22 @@
           href="https://www.github.com/alexandrecoin"
           target="_blank"
           class="link"
-        > <i class="fa fa-link" aria-hidden="true"></i> github</a
+        >
+          <i class="fa fa-link" aria-hidden="true"></i> github</a
         >
       </li>
+      <mode-switch />
     </ul>
   </div>
 </template>
 
 <script>
+import ModeSwitch from '../components/dark-mode/ModeSwitch';
 export default {
   name: 'Navbar',
+  components: {
+    ModeSwitch,
+  },
 };
 </script>
 
@@ -35,7 +40,7 @@ export default {
   justify-content: flex-end;
   height: 7vh;
   position: fixed;
-  background-color: #f1f1f1;
+  background-color: #efefef;
   top: 0;
   left: 0;
   right: 0;

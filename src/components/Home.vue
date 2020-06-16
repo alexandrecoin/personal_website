@@ -4,7 +4,7 @@
     <p class="intro">
       {{ intro }}
     </p>
-    <h2>What I can do for you</h2>
+    <h2>What I do...</h2>
     <div class="application">
       <img
         src="../assets/web_app.png"
@@ -77,7 +77,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
   height: 90%;
@@ -109,7 +108,7 @@ export default {
 .mobile_app_img {
   max-width: 30%;
   border-radius: 1em;
-  box-shadow: 20px 20px 42px #d9d9d9, -20px -20px 42px #ffffff;
+  box-shadow: var(--box-shadow-left) #d9d9d9, var(--box-shadow-right) #ffffff;
 }
 
 .application_description,
