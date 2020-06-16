@@ -40,7 +40,8 @@ export default {
   justify-content: flex-end;
   height: 7vh;
   position: fixed;
-  background-color: #efefef;
+  background-color: red;
+  /* background-color: var(--bg-color); */
   top: 0;
   left: 0;
   right: 0;

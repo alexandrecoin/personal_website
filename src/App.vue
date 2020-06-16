@@ -21,15 +21,34 @@ export default {
   data() {
     return {
       scrollPosition: null,
+      toggleSwitch: document.querySelector(
+        '.theme-switch input[type="checkbox"]',
+      ),
+      currentTheme: localStorage.getItem('theme')
+        ? localStorage.getItem('theme')
+        : null,
     };
   },
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
     },
+    checkTheme() {
+      console.log(this.currentTheme);
+      if (this.currentTheme) {
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
+
+        if (this.currentTheme === 'dark') {
+          console.log('oook');
+          this.toggleSwitch.checked = true;
+        }
+      }
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
+    console.log(document.querySelector('.theme-switch input[type="checkbox"]').value);
+    this.checkTheme();
   },
 };
 </script>
@@ -67,6 +86,7 @@ body {
 
 #app {
   font-family: 'Arimo', sans-serif;
+
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

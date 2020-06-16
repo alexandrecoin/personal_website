@@ -2,12 +2,28 @@
   <div class="theme-switch-wrapper">
     <em class="light-mode">&#9728;</em>
     <label class="theme-switch" for="checkbox">
-      <input type="checkbox" id="checkbox" />
+      <input type="checkbox" id="checkbox" @click="switchTheme($event)" />
       <div class="slider round"></div>
     </label>
     <em>&#9790;</em>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .theme-switch-wrapper {

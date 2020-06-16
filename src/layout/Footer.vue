@@ -1,9 +1,11 @@
 <template>
   <footer class="footer">
     <p class="contact">
-      If you think I could be of any help for your project, do not hesitate to
-      contact me :
-      <span><a href="mailto:alexandre.pc.coin@gmail.com">e-mail</a></span>
+      Any request or just want to say hi ? Let's get in touch :
+      <span
+        ><a href="mailto:alexandre.pc.coin@gmail.com"
+          ><i class="fa fa-envelope" aria-hidden="true"></i></a
+      ></span>
     </p>
   </footer>
 </template>
@@ -14,6 +16,10 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   height: 3%;
+}
+
+a {
+  text-decoration: none;
 }
 
 a,
