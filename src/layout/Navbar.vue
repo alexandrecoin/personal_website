@@ -2,10 +2,21 @@
   <div class="container">
     <ul id="links">
       <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" to="/work">Work</router-link>
+      <!-- <router-link class="link" to="/work">Work</router-link> -->
       <router-link class="link" to="/about">About</router-link>
-      <!-- <router-link class="link" to="/">Articles</router-link> -->
-      <router-link class="link" to="/contact">Contact</router-link>
+      <li class="twitter">
+        <a href="https://www.twitter.com/lxndrcn" target="_blank" class="link"
+          >twitter</a
+        >
+      </li>
+      <li class="link github">
+        <a
+          href="https://www.github.com/alexandrecoin"
+          target="_blank"
+          class="link"
+        >github</a
+        >
+      </li>
     </ul>
   </div>
 </template>
@@ -17,8 +28,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .container {
   z-index: 1;
   display: flex;
@@ -59,5 +68,14 @@ h1 {
 
 .router-link-exact-active {
   font-weight: bold;
+}
+
+@media (max-width: 640px) {
+
+
+  #links {
+    flex-direction: column;
+    margin-right: 0.3em;
+  }
 }
 </style>

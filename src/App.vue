@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Navbar :style="{ background: scrollPosition < 50 ? '#f1f1f1' : 'white' }" />
+    <Navbar
+      :style="{ background: scrollPosition < 50 ? '#f1f1f1' : 'white' }"
+    />
     <router-view></router-view>
     <Footer />
   </div>
@@ -49,7 +51,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 h2 {
