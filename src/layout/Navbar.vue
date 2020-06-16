@@ -6,15 +6,15 @@
       <router-link class="link" to="/about">About</router-link>
       <li class="twitter">
         <a href="https://www.twitter.com/lxndrcn" target="_blank" class="link"
-          >twitter</a
+          ><i class="fa fa-link" aria-hidden="true"></i> twitter</a
         >
       </li>
-      <li class="link github">
+      <li class="github">
         <a
           href="https://www.github.com/alexandrecoin"
           target="_blank"
           class="link"
-        >github</a
+        > <i class="fa fa-link" aria-hidden="true"></i> github</a
         >
       </li>
     </ul>
@@ -71,11 +71,14 @@ h1 {
 }
 
 @media (max-width: 640px) {
-
+  .container {
+    height: 15%;
+  }
 
   #links {
     flex-direction: column;
     margin-right: 0.3em;
+    align-items: flex-end;
   }
 }
 </style>

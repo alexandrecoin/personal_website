@@ -1,8 +1,9 @@
 <template>
   <footer class="footer">
     <p class="contact">
-      If you think I could be of any help for your project, do not
-      hesitate to contact me : <span>email</span>
+      If you think I could be of any help for your project, do not hesitate to
+      contact me :
+      <span><a href="mailto:alexandre.pc.coin@gmail.com">e-mail</a></span>
     </p>
   </footer>
 </template>

@@ -2,10 +2,7 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <p class="intro">
-      Have you been dreaming of a website or an application ? I know you have !
-      And I would be very pleased to help you achieve that goal. If you ever
-      feel that we could work together, do not hesitate to contact me through
-      the "Contact" section above.
+      {{ intro }}
     </p>
     <h2>What I can do for you</h2>
     <div class="application">
@@ -18,7 +15,8 @@
         <h3>Web applications</h3>
         <p>
           Since I've started coding, my main focus has primarily been web
-          applications. I can help you design from sratch your project.
+          applications. With experience in Fintech and Edtech companies, I can
+          help you design your project from sratch.
         </p>
       </div>
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -69,7 +67,11 @@ export default {
   name: 'Home',
   data() {
     return {
-      title: 'Get the product you dream of.',
+      title: 'Hello ! How can I help you ?',
+      intro: `Hello there ! My name is Alexandre, and I'm a full-stack developer. I am currently looking for a new position. 
+      If you're browsing this website, you may have you been dreaming of a website or an application, no ? I know you have!
+      I would be very pleased to help you get this done. If you ever
+      feel that we could work together, do not hesitate to contact me.`,
     };
   },
 };
@@ -77,7 +79,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .container {
   height: 90%;
   display: flex;
@@ -99,7 +100,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   max-width: 80%;
-  margin-top: 5%;
+  margin-top: 1%;
   padding: 3% 0%;
 }
 
@@ -153,6 +154,7 @@ h1 {
 @media (max-width: 640px) {
   .container {
     flex-direction: column;
+    margin-top: 25%;
   }
 
   .application,
