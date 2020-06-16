@@ -21,6 +21,13 @@
           applications. I can help you design from sratch your project.
         </p>
       </div>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0099ff"
+          fill-opacity="1"
+          d="M0,224L1440,160L1440,320L0,320Z"
+        ></path>
+      </svg> -->
     </div>
 
     <div class="website">
@@ -70,6 +77,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .container {
   height: 90%;
   display: flex;

@@ -91,8 +91,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 7%;
-  height: 80vh;
+  margin-top: 3%;
+  height: 90%;
   max-width: 100vw;
   /* background: red; */
 }
