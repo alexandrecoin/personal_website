@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <h1>{{ title }}</h1>
+    <h1 class="full-title">{{ fullTitle }}</h1>
+    <h1 class="mobile-title">{{ mobileTitle }}</h1>
     <p class="intro">
       {{ intro }}
     </p>
-    <h2>What I can do for you</h2>
+    <h2>What I do</h2>
     <div class="application">
       <img
         src="../assets/web_app.png"
@@ -13,25 +14,18 @@
       />
       <div class="application_description">
         <h3>Web applications</h3>
-        <p>
+        <p class="text">
           Since I've started coding, my main focus has primarily been web
           applications. With experience in Fintech and Edtech companies, I can
           help you design your project from sratch.
         </p>
       </div>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0099ff"
-          fill-opacity="1"
-          d="M0,224L1440,160L1440,320L0,320Z"
-        ></path>
-      </svg> -->
     </div>
 
     <div class="website">
       <div class="website_description">
         <h3>Websites</h3>
-        <p>
+        <p class="text">
           Web apps are not the only product I can do for you. If you are looking
           for a sleek website, whether it is for a landing page, e-commerce or
           for any kind of business, I can do it too.
@@ -52,7 +46,7 @@
       />
       <div class="mobile_app_description">
         <h3>Mobile applications</h3>
-        <p>
+        <p class="text">
           Thanks to technologies such as React Native, you no longer need to
           develop different codebases depending on your targeted device. One
           code base, all available platforms, it's as simple as that !
@@ -67,10 +61,11 @@ export default {
   name: 'Home',
   data() {
     return {
-      title: 'Hello ! How can I help you ?',
+      fullTitle: 'Hello ! How can I help you ?',
+      mobileTitle: 'Hello !',
       intro: `Hello there ! My name is Alexandre, and I'm a full-stack developer. I am currently looking for a new position. 
-      If you're browsing this website, you may have you been dreaming of a website or an application, no ? I know you have!
-      I would be very pleased to help you get this done. If you ever
+      If you're visiting this website, you may have you been dreaming of a website or an application, no ? I know you have!
+      I would be very pleased to help you build it. If you ever happen to like what I've done or
       feel that we could work together, do not hesitate to contact me.`,
     };
   },
@@ -118,6 +113,12 @@ export default {
   max-width: 50%;
 }
 
+.intro,
+.text {
+  line-height: 2em;
+  text-align: left;
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -144,6 +145,10 @@ h1 {
     transition: transform 1s ease-in-out;
   }
 
+  .mobile-title {
+    display: none;
+  }
+
   .application_img:hover,
   .website_img:hover,
   .mobile_app_img:hover {
@@ -155,6 +160,10 @@ h1 {
   .container {
     flex-direction: column;
     margin-top: 25%;
+  }
+
+  .full-title {
+    display: none;
   }
 
   .application,

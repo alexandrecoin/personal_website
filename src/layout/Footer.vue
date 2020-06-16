@@ -1,9 +1,12 @@
 <template>
   <footer class="footer">
     <p class="contact">
-      If you think I could be of any help for your project, do not hesitate to
-      contact me :
-      <span><a href="mailto:alexandre.pc.coin@gmail.com">e-mail</a></span>
+      <span class="text">Any request or just want to say hi ? </span>Let's get in touch
+      :
+      <span
+        ><a href="mailto:alexandre.pc.coin@gmail.com"
+          ><i class="fa fa-envelope" aria-hidden="true"></i></a
+      ></span>
     </p>
   </footer>
 </template>
@@ -23,5 +26,15 @@ a:visited {
 
 .contact {
   margin-right: 5%;
+}
+
+@media (max-width: 640px) {
+  .text {
+    display: none;
+  }
+
+  .fa-envelope {
+    font-size: 1em;
+  }
 }
 </style>

@@ -12,21 +12,8 @@
     />
     <div class="text-container">
       <h2>{{ about.title }}</h2>
-      <p>{{ about.description.intro }}</p>
-      <p>{{ about.description.main }}</p>
-      <div class="buttons">
-        <button value="french" @click="downloadResume($event)">
-          Download (French)
-        </button>
-        <!-- <a
-          :href="require('../assets/resume/coin_alexandre_resume_french.pdf')"
-          download
-          >Download (French)</a
-        > -->
-        <button value="english" @click="downloadResume">
-          Download (English)
-        </button>
-      </div>
+      <p class="intro">{{ about.description.intro }}</p>
+
       <h3 class="techs_title">I am using on a daily basis :</h3>
       <div class="techs">
         <ul
@@ -35,7 +22,7 @@
           class="technos_list"
         >
           <li class="techno">
-            <!-- <h3>{{ techno.name }}</h3> -->
+            <p class="techno_name">{{ techno.name }}</p>
             <img :src="techno.path" v-bind:alt="techno.name" class="logo" />
           </li>
         </ul>
@@ -59,10 +46,6 @@ export default {
           name: 'Vue.js',
           path: require('../assets/technos/vue_logo.png'),
         },
-        // {
-        //   name: 'React',
-        //   path: require('../assets/technos/react_logo.png'),
-        // },
         {
           name: 'Node',
           path: require('../assets/technos/node_logo.png'),
@@ -73,15 +56,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    downloadResume(e) {
-      console.log(e.target.value);
-    },
-    // getPicture(path) {
-    //   console.log('../assets/technos/' + path + '.png');
-    //   return '../assets/technos/' + path + '.png';
-    // },
   },
 };
 </script>
@@ -94,11 +68,15 @@ export default {
   margin-top: 3%;
   height: 90%;
   max-width: 100vw;
-  /* background: red; */
 }
 
 .text-container {
   max-width: 40vw;
+}
+
+.intro {
+  text-align: left;
+  line-height: 2em;
 }
 
 .buttons {
@@ -131,6 +109,11 @@ export default {
   max-width: 10vw;
   list-style-type: none;
 }
+
+/* .techno {
+  flex-direction: column;
+  align-content: center;
+} */
 
 .logo {
   max-height: 80px;
@@ -168,6 +151,10 @@ export default {
     flex-direction: column;
     margin-bottom: 2vh;
     margin-left: 20%;
+  }
+
+  .techno_name {
+    display: none;
   }
 }
 </style>
